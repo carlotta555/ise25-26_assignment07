@@ -1,0 +1,4 @@
+Anfangs ist es aufwändiger den Review-Controller zu implementieren, da eine Abstraktionsebene dazukommt und der Code
+komplizierter strukturiert wird, aber ich könnte mir vorstellen dass es damit leichter ist, den Code zu validieren und
+zu warten, da der Code in sich konsistenter ist und Fehler schneller gefunden werden können, deswegen lohnt es sich
+auf lange Sicht einen Review-Controller zu implementieren
