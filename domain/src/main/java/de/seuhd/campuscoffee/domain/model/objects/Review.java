@@ -16,7 +16,7 @@ public record Review(
         @NonNull String reviewText,
         @NonNull Integer approvalCount, // is updated by the domain module
         @NonNull Boolean approved,  // is determined by the domain module
-        @NonNull Long author,
+        @NonNull User author,
         @Nullable LocalDateTime createdAt,
         @Nullable LocalDateTime updatedAt,
         @Nullable Pos pos

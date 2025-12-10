@@ -26,11 +26,14 @@ public abstract class ReviewDtoMapper implements DtoMapper<Review, ReviewDto> {
 
     @Mapping(target = "posId", expression = "java(source.pos().getId())")
     @Mapping(target = "authorId", expression = "java(source.author().getId())")
+    @Mapping(target = "review", source = "reviewText")
     public abstract ReviewDto fromDomain(Review source);
 
     @Mapping(target = "pos", expression = "java(posService.getById(source.posId()))")
     @Mapping(target = "author", expression = "java(userService.getById(source.authorId()))")
     @Mapping(target = "approved", constant = "false")
     @Mapping(target = "approvalCount", constant = "0")
+    @Mapping(target = "reviewText", source = "review")
+
     public abstract Review toDomain(ReviewDto source);
 }

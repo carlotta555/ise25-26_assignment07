@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static de.seuhd.campuscoffee.domain.tests.TestFixtures.getApprovalConfiguration;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
@@ -116,6 +116,7 @@ public class ReviewServiceTest {
         verify(reviewDataService).filter(pos, true);
         assertThat(retrievedReviews).hasSize(reviews.size());
     }
+
 
     @Test
     void createReviewPosDoesNotExistException() {
